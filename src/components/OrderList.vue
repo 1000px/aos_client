@@ -3,7 +3,7 @@
     <el-row :gutter="20">
       <el-col :span="6" v-for="(order, index) in orders" :key="index">
         <el-card shadow="hover">
-          <div slot="header" class="clearfix">
+          <div slot="header" class="order-header">
             <span>{{order.desk_name}}</span>
             <span>{{order.price}}</span>
           </div>
@@ -60,5 +60,17 @@ export default {
 }
 </script>
 <style scoped>
+.order-header {
+  text-align: right;
+  height: 32px;
+  line-height: 32px;
+}
+.order-header > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.order-header > span:nth-child(1) {
+  float: left;
+}
 
 </style>
