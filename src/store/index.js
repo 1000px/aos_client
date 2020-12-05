@@ -4,8 +4,19 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {},
-  mutations: {}
+  state: {
+    curRouterName: '/'
+  },
+  getters: {
+    getCurrentRouter: function (state) {
+      return state.curRouterName
+    }
+  },
+  mutations: {
+    chgCurrentRouter: function (state, obj) {
+      state.curRouterName = obj.name
+    }
+  }
 })
 
 export default store

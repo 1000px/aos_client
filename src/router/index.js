@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/views/index.vue'
+// import Index from '@/views/index.vue'
 import Order from '@/views/order.vue'
 import Shop from '@/views/shop.vue'
 import Category from '@/views/category.vue'
@@ -16,7 +16,8 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: Index
+      // component: Index
+      redirect: '/order'
     },
     {
       path: '/order',
